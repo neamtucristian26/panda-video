@@ -130,6 +130,32 @@ Both figure scripts take `--lang en|ro`.
 `--embeddings_dir` takes a comma-separated list; a clip is kept only if it is present in every
 directory. Branch order in the concatenated vector follows the order given.
 
+## Inference on new clips
+
+`src/predict.py` runs the whole pipeline on arbitrary videos so nothing needs pre-extracting. The encoders load once and are reused, so pass all your clips in one call rather than invoking it per file.
+
+```bash
+python src/predict.py clip1.mp4 clip2.mp4 \
+    --braven_ckpt <braven_large_lrs3vox2avs>/ \
+    --raven_repo raven_repo/ \
+    --topk 3 --json predictions.json
+```
+
+```
+clip1.mp4
+  -> echomimic     cos=+0.3496   margin +0.7045
+     hififace      cos=-0.3548
+     liveportrait  cos=-0.3707
+```
+
+`cos` is the cosine similarity to each class proxy and `margin` the gap to the runner-up. Use
+`--list FILE` for a path-per-line file, `--cpu` to force CPU, and `--uniform_frames` to sample
+16 frames instead of reading all of them (the released model was trained on all-frame features,
+so this trades accuracy for speed).
+
+**This answers "which generator", not "is this fake".** Every class is a generator, so a real
+clip is still assigned one. Attribution presupposes the clip is already known to be synthetic.
+
 ## Notes on the splits
 
 MAVOS-DD's official protocol keeps Sonic, HifiFace and Roop out of the training set, so a 7-way
