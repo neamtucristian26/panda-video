@@ -1,0 +1,21 @@
+{
+  "silhouette_raw": 0.007155450992286205,
+  "silhouette_projected": 0.8477590084075928,
+  "n_points": 2100,
+  "input_dim": 3840,
+  "n_per_class": 300,
+  "perplexity": 100.0,
+  "splits": [
+    "test_indomain"
+  ],
+  "pca_dim": 50,
+  "silhouette_sample": 2100,
+  "silhouette_2d_raw": -0.03802682086825371,
+  "silhouette_2d_projected": 0.723360538482666,
+  "method": "tsne",
+  "n_neighbors": 30,
+  "min_dist": 0.1,
+  "per_split": {
+    "test_indomain": 2100
+  }
+}
