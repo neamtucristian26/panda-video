@@ -1,4 +1,4 @@
-# 🐼🎞️ Video deepfake attribution using Proxy-Anchor learning
+# Video deepfake attribution using Proxy-Anchor learning
 
 Given a video clip that is already known to be a deepfake, identify **which generative method
 produced it**. This ports the metric-learning methodology of
