@@ -1,0 +1,16 @@
+torch==2.9.1
+torchvision==0.24.1
+torchaudio==2.9.1
+
+numpy==2.3.5
+pandas==2.3.3
+scikit-learn==1.8.0
+opencv-python==5.0.0
+tqdm==4.67.1
+matplotlib==3.10.8   
+
+transformers==4.57.6        
+face-alignment==1.5.0   
+
+omegaconf
+librosa
