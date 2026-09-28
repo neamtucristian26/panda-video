@@ -14,3 +14,4 @@ face-alignment==1.5.0
 
 omegaconf
 librosa
+umap-learn==0.5.11
