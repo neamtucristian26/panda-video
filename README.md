@@ -2,7 +2,7 @@
 
 Given a video clip that is already known to be a deepfake, identify **which generative method
 produced it**. This ports the metric-learning methodology of
-[panda](https://github.com/neamtucristian26/panda) from audio TTS source tracing to video,
+[PANDA](https://github.com/neamtucristian26/panda) from audio TTS source tracing to video,
 on the [MAVOS-DD](https://huggingface.co/datasets/unibuc-cs/MAVOS-DD) benchmark
 ([arXiv:2505.11109](https://arxiv.org/abs/2505.11109)).
 
